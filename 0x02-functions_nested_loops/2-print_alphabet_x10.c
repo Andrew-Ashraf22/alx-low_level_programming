@@ -2,7 +2,7 @@
 /**
 *print_alphabet_x10 - print 10 times the alphabet
 */
-void print_alphabet_x10(void)	
+void print_alphabet_x10(void)
 {
 	char ch;
 
@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 
 	i = 0;
 
-	while(i<10)
+	while (i < 10)
 	{
 		ch = 'a';
 		while (ch <= 'z')
