@@ -2,7 +2,7 @@
 /**
 *print_alphabet_x10 - print 10 times the alphabet
 */
-void print+alphabet_x10(void)
+void print_alphabet_x10(void)	
 {
 	char ch;
 
