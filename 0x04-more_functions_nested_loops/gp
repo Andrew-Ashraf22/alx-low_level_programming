@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m 'C more functions and nested loops task commited'
+git push
