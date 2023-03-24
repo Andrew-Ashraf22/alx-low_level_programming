@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-*print_diagonal - prints \ n times
-*@n: number of \
+*print_diagonal - prints / n times
+*@n: number of /
 */
 void print_diagonal(int n)
 {
@@ -20,5 +20,8 @@ void print_diagonal(int n)
 		}
 	}
 	else
+	{
 		_putchar('\n');
+
+	}
 }
