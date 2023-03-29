@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m 'c-more pointers,arrays task commited'
+git push
