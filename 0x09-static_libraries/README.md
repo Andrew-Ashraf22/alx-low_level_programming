@@ -1,0 +1,1 @@
+C-statick-libraries tasks
