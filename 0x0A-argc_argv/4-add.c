@@ -11,6 +11,7 @@
 int convertor(char *s)
 {
 	int i, j, num, len, f, digit;
+
 	i = 0;
 	j = 0;
 	num = 0;
@@ -51,9 +52,9 @@ int checker(char *str)
 {
 	unsigned int i = 0;
 
-	while (i < strlen(str)) 
+	while (i < strlen(str))
 	{
-		if (!isdigit(str[i])) 
+		if (!isdigit(str[i]))
 		{
 			return (0);
 		}

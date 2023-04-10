@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 int convertor(char *s)
 {
 	int i, j, num, len, f, digit;
+
 	i = 0;
 	j = 0;
 	num = 0;
