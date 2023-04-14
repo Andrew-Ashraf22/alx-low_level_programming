@@ -31,20 +31,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s = malloc(sizeof(char) * (i + n + 1));
 	}
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 
-	while (s1[k] != '\0')
+	while (k < i)
 	{
 		s[k] = s1[k];
 		k++;
 	}
-	while (n > 0)
+	while (n < j && k < (i + n))
 	{
 		s[k] = s2[m];
 		k++;
 		m++;
-		n--;
+	}
+	while (n >= j && k < (i + j))
+	{
+		s[k] = s2[m];
+		k++;
+		m++;
 	}
 	s[k] = '\0';
 	return (s);
