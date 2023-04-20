@@ -17,12 +17,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		tempstr = va_arg(strs, char*);
+		tempstr = va_arg(strs, char *);
 
 		if (tempstr == NULL)
 			printf("(nil)");
-
-		printf("%s", tempstr);
+		else
+			printf("%s", tempstr);
 
 		if (separator != NULL && i != (n - 1))
 			printf("%s", separator);
