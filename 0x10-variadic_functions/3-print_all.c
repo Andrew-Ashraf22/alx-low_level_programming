@@ -21,11 +21,11 @@ void print_all(const char * const format, ...)
 		{
 			switch (format[i])
 			{
-				case 'i':
-					printf("%s%d", sep, va_arg(a, int));
-					break;
 				case 'c':
 					printf("%s%c", sep, va_arg(a, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(a, int));
 					break;
 				case 'f':
 					printf("%s%f", sep, va_arg(a, double));
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
-			sep = ",";
+			sep = ", ";
 			i++;
 		}
 	}
