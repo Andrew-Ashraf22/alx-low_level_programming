@@ -8,11 +8,11 @@
   */
 size_t print_listint_safe(const listint_t *head)
 {
-	unsigned int size = 0;
-	listint_t *slow = head, *fast = head;
+	const listint_t *slow = head, *fast = head, *temp = head, *temp2 = slow;
 	bool looped = false;
+	unsigned int size = 0;
 
-	while (fast && fast->next)
+	while (fast != NULL && fast->next != NULL)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
@@ -20,39 +20,29 @@ size_t print_listint_safe(const listint_t *head)
 		if (slow == fast)
 		{
 			looped = true;
-			break;
+			temp2 = slow;
+			while (temp != temp2)
+			{
+				temp = temp->next;
+				temp2 = temp2->next;
+			}
 		}
-		printf("[%p] %d\n", (void *)slow, slow->n);
 	}
 	if (looped)
 	{
-		listint_t *temp = head;
-		listint_t *temp2 = slow;
-		while (temp != temp2)
+		while (head != temp)
 		{
-			printf("[%p] %d\n", (void *)temp, temp->n);
-			temp = temp->next;
-			size++;
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
 		}
-	while (temp2 != slow)
-	{
-		printf("[%p] %d\n", (void *)temp2, temp2->n);
-		temp2 = temp2->next;
-		size++;
+		printf("->[%p] %d\n", (void *)temp, temp->n);
 	}
-
-	}
-
-	printf("[%p] %d\n", (void *)temp2, temp2->n);
-
 	else
 	{
-		listint_t *temp = head;
-		while (temp)
+		while (head)
 		{
-			printf("[%p] %d\n", (void *)temp, temp->n);
-			temp = temp->next;
-			size++;
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
 		}
 	}
 	return (size);
