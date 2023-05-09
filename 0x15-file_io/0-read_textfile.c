@@ -2,15 +2,15 @@
 /**
 *read_textfile - read file and prints it to stdout
 *Return: num of letters  to print
-*@filename: the path 
-*@letters: num of letters to print 
+*@filename: the path
+*@letters: num of letters to print
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	void* buffer;
+	void *buffer;
 	ssize_t reader, writer;
-	
+
 	if (filename == NULL)
 		return (0);
 
