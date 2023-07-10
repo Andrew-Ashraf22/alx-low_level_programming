@@ -12,7 +12,7 @@ void closer(int tempfd);
 
 int main(int argc, char *argv[])
 {
-        int reader, writer, fdfrom, fdto, holder;
+        int reader, writer, fdfrom, fdto;
         char *buffer;
 
         buffer = malloc(sizeof(char) * 1024);
