@@ -35,7 +35,11 @@ int main(int argc, char *argv[])
                 {
                         dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
                         free(buffer);
-                    writer = write(fdto, buffer, reader);
+			exit (98);
+		}
+
+		writer = write(fdto, buffer, reader);
+
                 if (fdto < 0 || writer < 0)
                 {
                         dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
@@ -44,6 +48,7 @@ int main(int argc, char *argv[])
                 }
                 reader = read(fdfrom, buffer, 1024);
                 fdto = open(argv[2], O_WRONLY | O_APPEND);
+
         } while (reader > 0);
         free(buffer);
         closer(fdfrom);
