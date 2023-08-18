@@ -1,5 +1,5 @@
 #include "lists.h"
-
+void free_n(dlistint_t *temp);
 /**
  * delete_dnodeint_at_index - deletes node at index
  * @head: the list
@@ -45,9 +45,20 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp = temp->next;
 		index--;
 	}
+	free_n(temp);
+	return (1);
+}
+
+/**
+ * free_n - coninue the func
+ *@temp: node
+ */
+void free_n(dlistint_t *temp)
+{
+	dlistint_t *temp2;
+
 	((temp->next)->next)->prev = temp;
 	temp2 = temp->next;
 	temp->next = (temp->next)->next;
 	free(temp2);
-	return (1);
 }
