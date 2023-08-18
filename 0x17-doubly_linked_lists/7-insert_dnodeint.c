@@ -19,7 +19,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new);
 	}
 
-	temp2 = *head;
+	temp2 = *h;
 	while (temp2)
 	{
 		temp2 = temp2->next;
